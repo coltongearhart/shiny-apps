@@ -1,2 +1,2 @@
 # shiny-apps
-Miscellaneuous shiny apps
+Miscellaneous shiny apps
