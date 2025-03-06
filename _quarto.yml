@@ -1,0 +1,26 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Shiny apps"
+  author: "Colton Gearhart"
+  cover-image: shiny.png
+  chapters:
+    - index.qmd
+    - placeholder1.qmd
+    - placeholder2.qmd
+
+format:
+  html:
+    theme: flatly
+    code-link: true
+    #code-fold: show
+    #code-tools: true
+    code-block-border-left: "#2C3E50"
+    highlight-style: github
+    number-depth: 3
+    toc-depth: 3
+    df-print: paged
+    
+title-block-banner: true

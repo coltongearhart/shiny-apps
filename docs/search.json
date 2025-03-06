@@ -1,0 +1,42 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Shiny apps",
+    "section": "",
+    "text": "Overview\nThis site contains the various shiny apps that I have made throughout the years.",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#source",
+    "href": "index.html#source",
+    "title": "Shiny apps",
+    "section": "Source",
+    "text": "Source\n\n\n\n\n\n\nQuarto blog publish details\n\n\n\nThis book was created using Quarto and published with Github Pages.\n\n\n\n\n\n\n\n\nGithub repository for code\n\n\n\nYou can find the code to reproduce this project at coltongearhart/shiny-apps.",
+    "crumbs": [
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "placeholder1.html",
+    "href": "placeholder1.html",
+    "title": "2  Greaves",
+    "section": "",
+    "text": "hello world",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Greaves</span>"
+    ]
+  },
+  {
+    "objectID": "placeholder2.html",
+    "href": "placeholder2.html",
+    "title": "3  Total care",
+    "section": "",
+    "text": "hello world",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Total care</span>"
+    ]
+  }
+]
