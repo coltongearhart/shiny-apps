@@ -1,0 +1,44 @@
+# Template {.unnumbered}
+
+## Dashboard
+
+![](files/template.png)
+
+## Code
+
+### Pre code
+
+```{r}
+#| eval: false
+
+
+```
+
+### UI
+
+```{r}
+#| eval: false
+
+
+
+```
+
+### Server
+
+```{r}
+#| eval: false
+
+
+
+```
+
+### Combine
+
+```{r}
+#| eval: false
+
+### ---- Run app ---- 
+
+shinyApp(ui, server)
+
+```

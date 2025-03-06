@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Greaves – Shiny apps</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./interview.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+</head>
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./greaves.html">Greaves</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Greaves</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Shiny apps</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./greaves.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Greaves</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./interview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interview</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./totalcare.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">TotalCare analysis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./measuring.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Measuring</span></a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li>
+<a href="#dashboard" id="toc-dashboard" class="nav-link active" data-scroll-target="#dashboard">Dashboard</a>
+  <ul class="collapse">
+<li><a href="#demo---tab-1" id="toc-demo---tab-1" class="nav-link" data-scroll-target="#demo---tab-1">Demo - Tab 1</a></li>
+  <li><a href="#demo---tab-2" id="toc-demo---tab-2" class="nav-link" data-scroll-target="#demo---tab-2">Demo - Tab 2</a></li>
+  <li><a href="#demo---tab-3" id="toc-demo---tab-3" class="nav-link" data-scroll-target="#demo---tab-3">Demo - Tab 3</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application">Application</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a>
+  <ul class="collapse">
+<li><a href="#pre-code" id="toc-pre-code" class="nav-link" data-scroll-target="#pre-code">Pre code</a></li>
+  <li><a href="#ui" id="toc-ui" class="nav-link" data-scroll-target="#ui">UI</a></li>
+  <li><a href="#server" id="toc-server" class="nav-link" data-scroll-target="#server">Server</a></li>
+  <li><a href="#combine" id="toc-combine" class="nav-link" data-scroll-target="#combine">Combine</a></li>
+  </ul>
+</li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="dashboard" class="level2"><h2 class="anchored" data-anchor-id="dashboard">Dashboard</h2>
+<section id="demo---tab-1" class="level3"><h3 class="anchored" data-anchor-id="demo---tab-1">Demo - Tab 1</h3>
+<p><img src="files/greaves1.png" class="img-fluid"></p>
+</section><section id="demo---tab-2" class="level3"><h3 class="anchored" data-anchor-id="demo---tab-2">Demo - Tab 2</h3>
+<p><img src="files/greaves2.png" class="img-fluid"></p>
+</section><section id="demo---tab-3" class="level3"><h3 class="anchored" data-anchor-id="demo---tab-3">Demo - Tab 3</h3>
+<p><img src="files/greaves3.png" class="img-fluid"></p>
+</section><section id="application" class="level3"><h3 class="anchored" data-anchor-id="application">Application</h3>
+<p><img src="files/greaves4.png" class="img-fluid"></p>
+</section></section><section id="code" class="level2"><h2 class="anchored" data-anchor-id="code">Code</h2>
+<section id="pre-code" class="level3"><h3 class="anchored" data-anchor-id="pre-code">Pre code</h3>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">### ----- READ ME ---- </span></span>
+<span></span>
+<span><span class="co"># This app demonstrates the properties and results of Gibbs sampling, a MCMC method</span></span>
+<span><span class="co"># Once the number of parameters and number of iterations are initialized by the user,</span></span>
+<span><span class="co"># it generates n random numbers from a dependent sampling scheme contruscted according to Gibbs sampling methods</span></span>
+<span><span class="co"># The first tab demonstrates the properties / results of a Gibbs sampling algorithm</span></span>
+<span><span class="co"># The first panel checks the last 100 sampled values via a scatterplot to see if we can consider the generated numbers as an independent samples</span></span>
+<span><span class="co"># The second panel creates a histogram of the sampled values (minus the burn-in iterations) and compares it to the actual marginal densities</span></span>
+<span><span class="co"># The third panel plots the density estimates obtained by averaging over the conditional densities; again it compares it to the known marginal density</span></span>
+<span><span class="co"># The comparisons are made to demonstrate that Gibbs sampling results in samples from the desired distribution</span></span>
+<span><span class="co"># The second tab is an application of Gibbs sampling, where there is no closed form solution for the distribution of interest</span></span>
+<span><span class="co"># Once the iterations and parameters are initialized by the user, it will run the algorithm and output the estimated density and summary statistics</span></span>
+<span></span>
+<span><span class="co"># Packages -&gt; the following packages need to be installed in order to run this app</span></span>
+<span><span class="co"># -&gt; tidyverse, magrittr, shiny, ggpubr, and actuar</span></span>
+<span></span>
+<span><span class="co">### ----- Load packages ---- </span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>scipen <span class="op">=</span> <span class="fl">999</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://tidyverse.tidyverse.org">"tidyverse"</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://magrittr.tidyverse.org">"magrittr"</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://shiny.posit.co/">"shiny"</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://rpkgs.datanovia.com/ggpubr/">"ggpubr"</a></span><span class="op">)</span></span>
+<span><span class="co"># for pareto function</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://gitlab.com/vigou3/actuar">"actuar"</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># help pages for reactive events and isolate</span></span>
+<span><span class="co"># -&gt; reactive -&gt; https://shiny.rstudio.com/tutorial/written-tutorial/lesson6/</span></span>
+<span><span class="co"># -&gt; isolate -&gt; https://shiny.rstudio.com/articles/isolation.html</span></span>
+<span></span>
+<span><span class="co">### ----- Load required items ---- </span></span>
+<span></span>
+<span><span class="co"># functions for demo</span></span>
+<span></span>
+<span><span class="co"># function to generate random data from conditional distributions</span></span>
+<span><span class="va">generate_sample</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">n</span> <span class="op">=</span> <span class="fl">10000</span>, <span class="va">alpha</span> <span class="op">=</span> <span class="fl">5</span>, <span class="va">beta</span> <span class="op">=</span> <span class="fl">100</span>, <span class="va">start_x</span> <span class="op">=</span> <span class="fl">5</span>, <span class="va">start_lambda</span> <span class="op">=</span> <span class="fl">1.5</span>, <span class="va">seed</span> <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  </span>
+<span>  <span class="co"># create matrix</span></span>
+<span>  <span class="va">data_sample</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="cn">NA</span>, nrow <span class="op">=</span> <span class="va">n</span>, ncol <span class="op">=</span> <span class="fl">3</span>, dimnames <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="cn">NULL</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"iteration"</span>, <span class="st">"X"</span>, <span class="st">"lambda"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># conditionally set random seed</span></span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="va">seed</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="va">seed</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># initialize counter and starting values</span></span>
+<span>  <span class="va">i</span> <span class="op">=</span> <span class="fl">1</span></span>
+<span>  <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span>, <span class="op">]</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">i</span>, <span class="va">start_x</span>, <span class="va">start_lambda</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># generate new data for x and lambda based on sequentially updated conditional distributions</span></span>
+<span>  <span class="kw">while</span> <span class="op">(</span><span class="va">i</span> <span class="op">&lt;</span> <span class="va">n</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    </span>
+<span>    <span class="co"># record iteration</span></span>
+<span>    <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span> <span class="op">+</span> <span class="fl">1</span>, <span class="st">"iteration"</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">i</span> <span class="op">+</span> <span class="fl">1</span></span>
+<span>    </span>
+<span>    <span class="co"># sample from x | lambda</span></span>
+<span>    <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span> <span class="op">+</span> <span class="fl">1</span>, <span class="st">"X"</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Exponential.html">rexp</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">1</span>, rate <span class="op">=</span> <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span>, <span class="st">"lambda"</span><span class="op">]</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="co"># sample from lambda | x</span></span>
+<span>    <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span> <span class="op">+</span> <span class="fl">1</span>, <span class="st">"lambda"</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/GammaDist.html">rgamma</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">1</span>, shape <span class="op">=</span> <span class="va">alpha</span> <span class="op">+</span> <span class="fl">1</span>, rate <span class="op">=</span> <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span> <span class="op">+</span> <span class="fl">1</span>, <span class="st">"X"</span><span class="op">]</span> <span class="op">+</span> <span class="va">beta</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="co"># increase counter</span></span>
+<span>    <span class="va">i</span> <span class="op">&lt;-</span> <span class="va">i</span> <span class="op">+</span> <span class="fl">1</span></span>
+<span>  <span class="op">}</span></span>
+<span>  </span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">data_sample</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># function to solve for density estimates</span></span>
+<span><span class="va">estimate_density</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">input_values</span> <span class="op">=</span> <span class="fl">1</span>, <span class="va">given_values</span> <span class="op">=</span> <span class="fl">1</span>, <span class="va">equation</span> <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  </span>
+<span>  <span class="co"># calculate density estimate</span></span>
+<span>  <span class="va">density_estimate</span> <span class="op">&lt;-</span> <span class="fu">equation</span><span class="op">(</span><span class="va">input_values</span>, <span class="va">given_values</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="va">colMeans</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># functions for application</span></span>
+<span></span>
+<span><span class="co"># function to generate random data from conditional distributions</span></span>
+<span><span class="va">generate_sample_2</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">k</span> <span class="op">=</span> <span class="fl">10000</span>, <span class="va">alpha</span> <span class="op">=</span> <span class="fl">5</span>, <span class="va">beta</span> <span class="op">=</span> <span class="fl">8</span>, <span class="va">lambda</span> <span class="op">=</span> <span class="fl">12</span>, </span>
+<span>                              <span class="va">start_x</span> <span class="op">=</span> <span class="fl">5</span>, <span class="va">start_p</span> <span class="op">=</span> <span class="fl">0.5</span>, <span class="va">start_n</span> <span class="op">=</span> <span class="fl">15</span>, <span class="va">seed</span> <span class="op">=</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  </span>
+<span>  <span class="co"># create dataframe</span></span>
+<span>  <span class="va">data_sample</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="cn">NA</span>, nrow <span class="op">=</span> <span class="va">k</span>, ncol <span class="op">=</span> <span class="fl">4</span>, dimnames <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="cn">NULL</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"iteration"</span>, <span class="st">"X"</span>, <span class="st">"p"</span>, <span class="st">"n"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># conditionally set random seed</span></span>
+<span>  <span class="kw">if</span> <span class="op">(</span><span class="va">seed</span> <span class="op">&gt;</span> <span class="fl">0</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="va">seed</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># initialize counter and starting values</span></span>
+<span>  <span class="va">i</span> <span class="op">=</span> <span class="fl">1</span></span>
+<span>  <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span>, <span class="op">]</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">i</span>, <span class="va">start_x</span>, <span class="va">start_p</span>, <span class="va">start_n</span><span class="op">)</span></span>
+<span>  </span>
+<span>  <span class="co"># generate new data for x, p and n based on sequentially updated conditional distributions</span></span>
+<span>  <span class="kw">while</span> <span class="op">(</span><span class="va">i</span> <span class="op">&lt;</span> <span class="va">k</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    </span>
+<span>    <span class="co"># record iteration</span></span>
+<span>    <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span> <span class="op">+</span> <span class="fl">1</span>, <span class="st">"iteration"</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">i</span> <span class="op">+</span> <span class="fl">1</span></span>
+<span>    </span>
+<span>    <span class="co"># sample from x | p , n</span></span>
+<span>    <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span> <span class="op">+</span> <span class="fl">1</span>, <span class="st">"X"</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Binomial.html">rbinom</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">1</span>, size <span class="op">=</span> <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span>, <span class="st">"n"</span><span class="op">]</span>, prob <span class="op">=</span> <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span>, <span class="st">"p"</span><span class="op">]</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="co"># sample from p | x , n</span></span>
+<span>    <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span> <span class="op">+</span> <span class="fl">1</span>, <span class="st">"p"</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Beta.html">rbeta</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">1</span>, shape1 <span class="op">=</span> <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span> <span class="op">+</span> <span class="fl">1</span>, <span class="st">"X"</span><span class="op">]</span> <span class="op">+</span> <span class="va">alpha</span>, shape2 <span class="op">=</span> <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span>, <span class="st">"n"</span><span class="op">]</span> <span class="op">+</span> <span class="va">beta</span> <span class="op">-</span> <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span> <span class="op">+</span> <span class="fl">1</span>, <span class="st">"X"</span><span class="op">]</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="co"># sample from n - x | x , p and then calculate final n = (n - x) + x</span></span>
+<span>    <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span> <span class="op">+</span> <span class="fl">1</span>, <span class="st">"n"</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Poisson.html">rpois</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">1</span>, lambda <span class="op">=</span> <span class="va">lambda</span> <span class="op">*</span> <span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span> <span class="op">+</span> <span class="fl">1</span>, <span class="st">"p"</span><span class="op">]</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="va">data_sample</span><span class="op">[</span><span class="va">i</span> <span class="op">+</span> <span class="fl">1</span>, <span class="st">"X"</span><span class="op">]</span></span>
+<span>    </span>
+<span>    <span class="co"># increase counter</span></span>
+<span>    <span class="va">i</span> <span class="op">&lt;-</span> <span class="va">i</span> <span class="op">+</span> <span class="fl">1</span></span>
+<span>  <span class="op">}</span></span>
+<span>  </span>
+<span>  <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">data_sample</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># function to solve for density estimates</span></span>
+<span><span class="va">estimate_density_2</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">input_values</span> <span class="op">=</span> <span class="fl">1</span>, <span class="va">given_values1</span> <span class="op">=</span> <span class="fl">1</span>, <span class="va">given_values2</span> <span class="op">=</span> <span class="fl">1</span>, <span class="va">equation</span> <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  </span>
+<span>  <span class="co"># calculate density estimate</span></span>
+<span>  <span class="va">density_estimate</span> <span class="op">=</span> <span class="fu">equation</span><span class="op">(</span><span class="va">input_values</span>, <span class="va">given_values1</span>, <span class="va">given_values2</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="va">colMeans</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># function to calculate mean of discrete probability distribution</span></span>
+<span><span class="va">calc_mean_2</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span> <span class="op">=</span> <span class="fl">1</span>, <span class="va">p_x</span> <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">x</span> <span class="op">*</span> <span class="va">p_x</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co"># function to calculate variance of discrete probability distribution</span></span>
+<span><span class="va">calc_var_2</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span> <span class="op">=</span> <span class="fl">1</span>, <span class="va">p_x</span> <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="co"># calculate mean</span></span>
+<span>  <span class="va">mean</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">x</span> <span class="op">*</span> <span class="va">p_x</span><span class="op">)</span></span>
+<span>  <span class="co"># calculate variance</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="op">(</span><span class="op">(</span><span class="va">x</span> <span class="op">-</span> <span class="va">mean</span><span class="op">)</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span> <span class="op">*</span> <span class="va">p_x</span><span class="op">)</span></span>
+<span><span class="op">}</span></span>
+<span></span>
+<span><span class="co">### ----- Set global plot options ---- </span></span>
+<span></span>
+<span><span class="co"># create default storytelling with data theme</span></span>
+<span><span class="va">theme_swd</span> <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span></span>
+<span>  <span class="co"># titles and captions</span></span>
+<span>  plot.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">rel</a></span><span class="op">(</span><span class="fl">1.75</span><span class="op">)</span>, color <span class="op">=</span> <span class="st">"grey30"</span><span class="op">)</span>,</span>
+<span>  plot.subtitle <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">rel</a></span><span class="op">(</span><span class="fl">1.25</span><span class="op">)</span>, color <span class="op">=</span> <span class="st">"grey30"</span><span class="op">)</span>,</span>
+<span>  plot.caption <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>hjust <span class="op">=</span> <span class="fl">0</span>, color <span class="op">=</span> <span class="st">"grey30"</span><span class="op">)</span>,</span>
+<span>  <span class="co"># axes</span></span>
+<span>  axis.title.x <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>hjust <span class="op">=</span> <span class="fl">0</span>, color <span class="op">=</span> <span class="st">"grey30"</span><span class="op">)</span>,</span>
+<span>  axis.title.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>hjust <span class="op">=</span> <span class="fl">1</span>, color <span class="op">=</span> <span class="st">"grey30"</span><span class="op">)</span>,</span>
+<span>  axis.line <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_line</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"grey90"</span><span class="op">)</span>,</span>
+<span>  axis.ticks <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_line</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"grey90"</span><span class="op">)</span>,</span>
+<span>  <span class="co"># plot background and gridlines</span></span>
+<span>  panel.background <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  panel.grid.major <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  panel.grid.minor <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span>,</span>
+<span>  <span class="co"># legend</span></span>
+<span>  legend.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"grey30"</span><span class="op">)</span>,</span>
+<span>  legend.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"grey30"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># set global plot theme</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme_get.html">theme_set</a></span><span class="op">(</span><span class="va">theme_swd</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="ui" class="level3"><h3 class="anchored" data-anchor-id="ui">UI</h3>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">### ----- Define UI ---- </span></span>
+<span></span>
+<span><span class="co"># create user interface</span></span>
+<span><span class="va">ui</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">fluidPage</a></span><span class="op">(</span></span>
+<span>  </span>
+<span>  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabsetPanel.html">tabsetPanel</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"tabs"</span>,</span>
+<span>              <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span><span class="op">(</span><span class="st">"Demo"</span>,</span>
+<span>                       </span>
+<span>                       <span class="co"># application title</span></span>
+<span>                       <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/titlePanel.html">titlePanel</a></span><span class="op">(</span><span class="st">"Demonstrating the Properties of Gibbs Sampling using Simulation"</span><span class="op">)</span>,</span>
+<span>                       </span>
+<span>                       <span class="co"># add sidebar</span></span>
+<span>                       <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/sidebarLayout.html">sidebarPanel</a></span><span class="op">(</span></span>
+<span>                         </span>
+<span>                         <span class="co"># text block of description</span></span>
+<span>                         <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">h4</a></span><span class="op">(</span><span class="va">tags</span><span class="op">$</span><span class="fu">u</span><span class="op">(</span><span class="st">"Description of problem"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                         <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">p</a></span><span class="op">(</span><span class="st">"Let the size of a claim X be exponentially distributed with</span></span>
+<span><span class="st">                             parameter λ. Further, treat the parameter λ as a random variable that follows</span></span>
+<span><span class="st">                             a gamma distribution with parameters α and β. α and β are constants."</span><span class="op">)</span>,</span>
+<span>                         </span>
+<span>                         <span class="co"># section label</span></span>
+<span>                         <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">h4</a></span><span class="op">(</span><span class="va">tags</span><span class="op">$</span><span class="fu">u</span><span class="op">(</span><span class="st">"Initialize info"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                         </span>
+<span>                         <span class="co"># input number of iterations</span></span>
+<span>                         <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/numericInput.html">numericInput</a></span><span class="op">(</span><span class="st">"n"</span>, label <span class="op">=</span> <span class="st">"Number of iterations"</span>,</span>
+<span>                                      value <span class="op">=</span> <span class="fl">1000</span>, min <span class="op">=</span> <span class="fl">200</span>, step <span class="op">=</span> <span class="fl">100</span><span class="op">)</span>,</span>
+<span>                         </span>
+<span>                         <span class="co"># add columns within sidebar panel</span></span>
+<span>                         <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/fluidPage.html">fluidRow</a></span><span class="op">(</span></span>
+<span>                           </span>
+<span>                           <span class="co"># first item</span></span>
+<span>                           <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/column.html">column</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">5</span>, offset <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>                                  <span class="co"># input alpha</span></span>
+<span>                                  <span class="co"># -&gt; even though the slider has a minimum, it still lets you type in something lower</span></span>
+<span>                                  <span class="co"># --&gt; so will have to fix that in the future somehow?</span></span>
+<span>                                  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/numericInput.html">numericInput</a></span><span class="op">(</span><span class="st">"alpha"</span>, label <span class="op">=</span> <span class="st">"α"</span>,</span>
+<span>                                               value <span class="op">=</span> <span class="fl">5</span>, min <span class="op">=</span> <span class="fl">2</span>, step <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                           </span>
+<span>                           <span class="co"># second item</span></span>
+<span>                           <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/column.html">column</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">5</span>, offset <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>                                  <span class="co"># input beta</span></span>
+<span>                                  <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/numericInput.html">numericInput</a></span><span class="op">(</span><span class="st">"beta"</span>, label <span class="op">=</span> <span class="st">"β"</span>,</span>
+<span>                                               value <span class="op">=</span> <span class="fl">100</span>, min <span class="op">=</span> <span class="fl">2</span>, step <span class="op">=</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
+<span>                         <span class="op">)</span>, <span class="co"># fluid row</span></span>
+<span>                         </span>
+<span>                         <span class="co"># action button to explain results</span></span>
+<span>                         <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/actionButton.html">actionButton</a></span><span class="op">(</span><span class="st">"run"</span>, label <span class="op">=</span> <span class="st">"Run simulation"</span><span class="op">)</span></span>
+<span>                       <span class="op">)</span>, <span class="co"># sidebar panel</span></span>
+<span>                       </span>
+<span>                       <span class="co"># add output spot</span></span>
+<span>                       <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/sidebarLayout.html">mainPanel</a></span><span class="op">(</span></span>
+<span>                         </span>
+<span>                         <span class="co"># set tabs for different output</span></span>
+<span>                         <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabsetPanel.html">tabsetPanel</a></span><span class="op">(</span>id <span class="op">=</span> <span class="st">"tabs_demo"</span>,</span>
+<span>                                     </span>
+<span>                                     <span class="co"># first tab</span></span>
+<span>                                     <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span><span class="op">(</span><span class="st">"Diagnostic plots"</span>,</span>
+<span>                                              </span>
+<span>                                              <span class="co"># scatter plots of last iterations</span></span>
+<span>                                              <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/plotOutput.html">plotOutput</a></span><span class="op">(</span><span class="st">"plot_scatter"</span><span class="op">)</span>,</span>
+<span>                                              </span>
+<span>                                              <span class="co"># panel to display results of simulation after generating data</span></span>
+<span>                                              <span class="co"># -&gt; if want to have footer stay at bottom</span></span>
+<span>                                              <span class="co"># -&gt; conditionalPanel doesn't save space for the output, so can trick it into saving space with textOuput and renderText</span></span>
+<span>                                              <span class="co"># --&gt; then just use an if/else to have it print blank lines (ie save space), then print results</span></span>
+<span>                                              <span class="co"># --&gt; this way the footer wouldn't have to move when results are printed</span></span>
+<span>                                              <span class="co"># -&gt; but couldn't figure it out (can achieve this with HTML / CSS as well, but didn't want to figure it out)</span></span>
+<span>                                              <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/conditionalPanel.html">conditionalPanel</a></span><span class="op">(</span>condition <span class="op">=</span> <span class="st">"input.run != 0"</span>,</span>
+<span>                                                               <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">h4</a></span><span class="op">(</span><span class="va">tags</span><span class="op">$</span><span class="fu">u</span><span class="op">(</span><span class="st">"Results"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                                                               <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">p</a></span><span class="op">(</span><span class="st">"These figures show the last 100 sampled values for X and λ, respectively.</span></span>
+<span><span class="st">                                                                   We can see that there is no pattern among the generated random numbers</span></span>
+<span><span class="st">                                                                   from the Gibbs sampling algorithm. Therefore, they can be considered</span></span>
+<span><span class="st">                                                                   independent random samples."</span><span class="op">)</span></span>
+<span>                                              <span class="op">)</span> <span class="co"># conditional panel</span></span>
+<span>                                     <span class="op">)</span>, <span class="co"># tab panel</span></span>
+<span>                                     </span>
+<span>                                     <span class="co"># second tab</span></span>
+<span>                                     <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span><span class="op">(</span><span class="st">"Sampled values"</span>,</span>
+<span>                                              </span>
+<span>                                              <span class="co"># histograms of sampled values and marginal curves</span></span>
+<span>                                              <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/plotOutput.html">plotOutput</a></span><span class="op">(</span><span class="st">"plot_hist"</span><span class="op">)</span>,</span>
+<span>                                              </span>
+<span>                                              <span class="co"># panel to display results of simulation after generating data</span></span>
+<span>                                              <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/conditionalPanel.html">conditionalPanel</a></span><span class="op">(</span>condition <span class="op">=</span> <span class="st">"input.run != 0"</span>,</span>
+<span>                                                               <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">h4</a></span><span class="op">(</span><span class="va">tags</span><span class="op">$</span><span class="fu">u</span><span class="op">(</span><span class="st">"Results"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                                                               <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">p</a></span><span class="op">(</span><span class="st">"These histograms show values are generated from dependent sampling schemes,</span></span>
+<span><span class="st">                                                                   which were based on the full conditional distributions of f(x|λ) and f(λ|x).</span></span>
+<span><span class="st">                                                                   Additionally, the respective marginal density curves of X and λ are overlaid</span></span>
+<span><span class="st">                                                                   on their corresponding histogram. The first 100 values of each sequence are</span></span>
+<span><span class="st">                                                                   discarded as these are considered to be the burn-in iterations."</span><span class="op">)</span>,</span>
+<span>                                                               <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">p</a></span><span class="op">(</span><span class="st">"The marginal densities appear to line up very well with the sampled values,</span></span>
+<span><span class="st">                                                                   which indicates the implemented dependent sampling schemes have generated random</span></span>
+<span><span class="st">                                                                   samples from their respective marginal distributions."</span><span class="op">)</span></span>
+<span>                                              <span class="op">)</span> <span class="co"># conditional panel</span></span>
+<span>                                     <span class="op">)</span>, <span class="co"># tab panel</span></span>
+<span>                                     </span>
+<span>                                     <span class="co"># third tab</span></span>
+<span>                                     <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span><span class="op">(</span><span class="st">"Estimated densities"</span>,</span>
+<span>                                              </span>
+<span>                                              <span class="co"># plots of estimated and actual density curves</span></span>
+<span>                                              <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/plotOutput.html">plotOutput</a></span><span class="op">(</span><span class="st">"plot_est"</span><span class="op">)</span>,</span>
+<span>                                              </span>
+<span>                                              <span class="co"># panel to display results of simulation after generating data</span></span>
+<span>                                              <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/conditionalPanel.html">conditionalPanel</a></span><span class="op">(</span>condition <span class="op">=</span> <span class="st">"input.run != 0"</span>,                                                <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">h4</a></span><span class="op">(</span><span class="va">tags</span><span class="op">$</span><span class="fu">u</span><span class="op">(</span><span class="st">"Results"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                                                               <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">p</a></span><span class="op">(</span><span class="st">"By taking the simulated average of f(x|λ) over the sampled values of λ,</span></span>
+<span><span class="st">                                                                   we obtain an estimate for the actual value of f(x) at the point x. These plots</span></span>
+<span><span class="st">                                                                   show the estimated densities, which line up very well with the actual densities.</span></span>
+<span><span class="st">                                                                   Therefore, we now have direct models of the respective target distributions."</span><span class="op">)</span></span>
+<span>                                              <span class="op">)</span> <span class="co"># conditional panel</span></span>
+<span>                                     <span class="op">)</span> <span class="co"># tab panel</span></span>
+<span>                         <span class="op">)</span>, <span class="co"># tab panel</span></span>
+<span>                         <span class="co"># footer</span></span>
+<span>                         <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">h6</a></span><span class="op">(</span><span class="va">tags</span><span class="op">$</span><span class="fu">footer</span><span class="op">(</span><span class="st">"This app is an extension of:"</span>,</span>
+<span>                                        <span class="va">tags</span><span class="op">$</span><span class="fu">a</span><span class="op">(</span>href <span class="op">=</span> <span class="st">"https://www.siam.org/Portals/0/Publications/SIURO/Volume%2011/S016609.pdf?ver=2018-06-13-135921-713"</span>,</span>
+<span>                                               <span class="st">"Implementation of Gibbs Sampling</span></span>
+<span><span class="st">                                                         within Bayesian Inference and its Applications in Actuarial Science,</span></span>
+<span><span class="st">                                                         SIAM Undergraduate Research Online, Vol. 11 (Gearhart, C. 2018)"</span><span class="op">)</span>,</span>
+<span>                                        align <span class="op">=</span> <span class="st">"left"</span>, style <span class="op">=</span> <span class="st">"</span></span>
+<span><span class="st">                                          position: sticky;</span></span>
+<span><span class="st">                                          border: 1px solid grey;</span></span>
+<span><span class="st">                                          bottom: 0;</span></span>
+<span><span class="st">                                          width: 100%;</span></span>
+<span><span class="st">                                          height: 40px;</span></span>
+<span><span class="st">                                          color: grey;</span></span>
+<span><span class="st">                                          padding: 5px;"</span></span>
+<span>                         <span class="op">)</span><span class="op">)</span> <span class="co"># footer</span></span>
+<span>                       <span class="op">)</span> <span class="co"># main panel</span></span>
+<span>              <span class="op">)</span>, <span class="co"># tab panel</span></span>
+<span>              <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/tabPanel.html">tabPanel</a></span><span class="op">(</span><span class="st">"Application"</span>,</span>
+<span>                       </span>
+<span>                       <span class="co"># application title</span></span>
+<span>                       <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/titlePanel.html">titlePanel</a></span><span class="op">(</span><span class="st">"Application of Gibbs Sampling"</span><span class="op">)</span>,</span>
+<span>                       </span>
+<span>                       <span class="co"># add sidebar</span></span>
+<span>                       <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/sidebarLayout.html">sidebarPanel</a></span><span class="op">(</span></span>
+<span>                         </span>
+<span>                         <span class="co"># text block of description</span></span>
+<span>                         <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">h4</a></span><span class="op">(</span><span class="va">tags</span><span class="op">$</span><span class="fu">u</span><span class="op">(</span><span class="st">"Description of problem"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                         <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">p</a></span><span class="op">(</span><span class="st">"In order to model the number of claims for a portfolio, let claim probability P</span></span>
+<span><span class="st">                            (as a random variable) follow a beta distribution with parameters α and β. Additionally,</span></span>
+<span><span class="st">                            the total number of policies within a portfolio N follow a zero-truncated Poisson distribution</span></span>
+<span><span class="st">                            with parameter λ."</span><span class="op">)</span>,</span>
+<span>                         <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">p</a></span><span class="op">(</span><span class="st">"Finally, assuming that filing a claim for a policy is independent and</span></span>
+<span><span class="st">                            that the probability of filing a claim is constant throughout the lifetime of the policy,</span></span>
+<span><span class="st">                            the number of policies that file a claim X can be modeled using a binomial distribution</span></span>
+<span><span class="st">                            with parameters N and P."</span><span class="op">)</span>,</span>
+<span>                         </span>
+<span>                         <span class="co"># section label</span></span>
+<span>                         <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">h4</a></span><span class="op">(</span><span class="va">tags</span><span class="op">$</span><span class="fu">u</span><span class="op">(</span><span class="st">"Initialize info"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                         </span>
+<span>                         <span class="co"># input number of iterations</span></span>
+<span>                         <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/numericInput.html">numericInput</a></span><span class="op">(</span><span class="st">"k_2"</span>, label <span class="op">=</span> <span class="st">"Number of iterations"</span>,</span>
+<span>                                      value <span class="op">=</span> <span class="fl">1000</span>, min <span class="op">=</span> <span class="fl">200</span>, step <span class="op">=</span> <span class="fl">100</span><span class="op">)</span>,</span>
+<span>                         </span>
+<span>                         <span class="co"># input alpha</span></span>
+<span>                         <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/numericInput.html">numericInput</a></span><span class="op">(</span><span class="st">"alpha_2"</span>, label <span class="op">=</span> <span class="st">"α (weight on p)"</span>,</span>
+<span>                                      value <span class="op">=</span> <span class="fl">2</span>, min <span class="op">=</span> <span class="fl">1</span>, step <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>,</span>
+<span>                         </span>
+<span>                         <span class="co"># input beta</span></span>
+<span>                         <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/numericInput.html">numericInput</a></span><span class="op">(</span><span class="st">"beta_2"</span>, label <span class="op">=</span> <span class="st">"β (weight on 1-p)"</span>,</span>
+<span>                                      value <span class="op">=</span> <span class="fl">8</span>, min <span class="op">=</span> <span class="fl">1</span>, step <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>,</span>
+<span>                         </span>
+<span>                         <span class="co"># input lambda</span></span>
+<span>                         <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/numericInput.html">numericInput</a></span><span class="op">(</span><span class="st">"lambda_2"</span>, label <span class="op">=</span> <span class="st">"λ (avg number of policies)"</span>,</span>
+<span>                                      value <span class="op">=</span> <span class="fl">12</span>, min <span class="op">=</span> <span class="fl">1</span>, step <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>,</span>
+<span>                         </span>
+<span>                         <span class="co"># action button to explain results</span></span>
+<span>                         <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/actionButton.html">actionButton</a></span><span class="op">(</span><span class="st">"run_2"</span>, label <span class="op">=</span> <span class="st">"Run simulation"</span><span class="op">)</span></span>
+<span>                         </span>
+<span>                       <span class="op">)</span>, <span class="co"># sidebar panel</span></span>
+<span>                       </span>
+<span>                       <span class="co"># add output spot</span></span>
+<span>                       <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/sidebarLayout.html">mainPanel</a></span><span class="op">(</span></span>
+<span>                         </span>
+<span>                         <span class="co"># plots of estimated density</span></span>
+<span>                         <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/plotOutput.html">plotOutput</a></span><span class="op">(</span><span class="st">"plot_est_2"</span><span class="op">)</span>,</span>
+<span>                         </span>
+<span>                         <span class="co"># panel to display results of simulation after generating data</span></span>
+<span>                         <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/conditionalPanel.html">conditionalPanel</a></span><span class="op">(</span>condition <span class="op">=</span> <span class="st">"input.run_2 != 0"</span>,  </span>
+<span>                                          <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">h4</a></span><span class="op">(</span><span class="va">tags</span><span class="op">$</span><span class="fu">u</span><span class="op">(</span><span class="st">"Results"</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                                          <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">p</a></span><span class="op">(</span><span class="st">"By taking the simulated average of f(x|p,n) over the simulated values P</span></span>
+<span><span class="st">                                              and N, a density estimate for the random variable X was be obtained. </span></span>
+<span><span class="st">                                              This marginal distribution of X represents the number of policies that generate</span></span>
+<span><span class="st">                                              a claim in a portfolio of N identical and independent policies,</span></span>
+<span><span class="st">                                              each with a claim probability equal to P."</span><span class="op">)</span>,</span>
+<span>                                          <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">p</a></span><span class="op">(</span><span class="st">"This is an important results because in this particular model f(x) could not</span></span>
+<span><span class="st">                                              be obtained in closed form. With the estimated density, actuaries can compute</span></span>
+<span><span class="st">                                              many statistics for a portfolio with parameters p and n."</span><span class="op">)</span></span>
+<span>                         <span class="op">)</span>, <span class="co"># conditional panel</span></span>
+<span>                         </span>
+<span>                         <span class="co"># footer</span></span>
+<span>                         <span class="fu"><a href="https://rstudio.github.io/htmltools/reference/builder.html">h6</a></span><span class="op">(</span><span class="va">tags</span><span class="op">$</span><span class="fu">footer</span><span class="op">(</span><span class="st">"This app is an extension of:"</span>,</span>
+<span>                                        <span class="va">tags</span><span class="op">$</span><span class="fu">a</span><span class="op">(</span>href <span class="op">=</span> <span class="st">"https://www.siam.org/Portals/0/Publications/SIURO/Volume%2011/S016609.pdf?ver=2018-06-13-135921-713"</span>,</span>
+<span>                                               <span class="st">"Implementation of Gibbs Sampling</span></span>
+<span><span class="st">                                                 within Bayesian Inference and its Applications in Actuarial Science,</span></span>
+<span><span class="st">                                                 SIAM Undergraduate Research Online, Vol. 11 (Gearhart, C. 2018)"</span><span class="op">)</span>,</span>
+<span>                                        align <span class="op">=</span> <span class="st">"left"</span>, style <span class="op">=</span> <span class="st">"</span></span>
+<span><span class="st">                                          position: sticky;</span></span>
+<span><span class="st">                                          border: 1px solid grey;</span></span>
+<span><span class="st">                                          bottom: 0;</span></span>
+<span><span class="st">                                          width: 100%;</span></span>
+<span><span class="st">                                          height: 40px;</span></span>
+<span><span class="st">                                          color: grey;</span></span>
+<span><span class="st">                                          padding: 5px;"</span></span>
+<span>                         <span class="op">)</span><span class="op">)</span> <span class="co"># footer</span></span>
+<span>                         </span>
+<span>                       <span class="op">)</span> <span class="co"># main panel</span></span>
+<span>              <span class="op">)</span> <span class="co"># tab panel</span></span>
+<span>  <span class="op">)</span> <span class="co"># tabset panel</span></span>
+<span><span class="op">)</span> <span class="co"># fluid page</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="server" class="level3"><h3 class="anchored" data-anchor-id="server">Server</h3>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">### ----- Define server ---- </span></span>
+<span></span>
+<span><span class="co"># how to get simulation to run every time run button is hit? not just if the inputs changed and button was hit</span></span>
+<span><span class="co"># create server</span></span>
+<span><span class="va">server</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">input</span>, <span class="va">output</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  </span>
+<span>  <span class="co"># Demo -&gt; Functions for data ------------------------</span></span>
+<span>  </span>
+<span>  <span class="co"># function to generate data and create modified datasets</span></span>
+<span>  <span class="co"># -&gt; call this function in place of the 'dataframe' if need to create a modified dataset or make a plot</span></span>
+<span>  <span class="co"># -&gt; returns a list of the modified datasets</span></span>
+<span>  <span class="va">get_new_data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/reactive.html">reactive</a></span><span class="op">(</span><span class="op">{</span></span>
+<span>    </span>
+<span>    <span class="co"># create object to store datasets</span></span>
+<span>    <span class="va">data</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>data_sample <span class="op">=</span> <span class="cn">NULL</span>, data_scatter <span class="op">=</span> <span class="cn">NULL</span>, data_sample2 <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="co"># sample from conditional distributions </span></span>
+<span>    <span class="va">data</span><span class="op">[[</span><span class="st">"data_sample"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu">generate_sample</span><span class="op">(</span>n <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">n</span>, alpha <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">alpha</span>, beta <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">beta</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="co"># create data for scatterplot</span></span>
+<span>    <span class="va">data</span><span class="op">[[</span><span class="st">"data_scatter"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[[</span><span class="st">"data_sample"</span><span class="op">]</span><span class="op">]</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>      <span class="va">data.frame</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>      <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">iteration</span> <span class="op">&gt;</span> <span class="va">input</span><span class="op">$</span><span class="va">n</span> <span class="op">-</span> <span class="fl">100</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="co"># set number of burn-in iterations</span></span>
+<span>    <span class="va">burn_in</span> <span class="op">&lt;-</span> <span class="fl">100</span></span>
+<span>    </span>
+<span>    <span class="co"># remove burn-in iteration</span></span>
+<span>    <span class="va">data</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">data</span><span class="op">[[</span><span class="st">"data_sample"</span><span class="op">]</span><span class="op">]</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>      <span class="va">data.frame</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>      <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">iteration</span> <span class="op">&gt;</span> <span class="va">burn_in</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">data</span><span class="op">)</span></span>
+<span>    </span>
+<span>  <span class="op">}</span><span class="op">)</span> <span class="co"># event reactive</span></span>
+<span>  </span>
+<span>  <span class="co"># function to perform calculations for x</span></span>
+<span>  <span class="va">density_x_given_lambda</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">X</span> <span class="op">=</span> <span class="fl">1</span>, <span class="va">Lambda</span> <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    </span>
+<span>    <span class="co"># specify density equation</span></span>
+<span>    <span class="va">Lambda</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">exp</a></span><span class="op">(</span><span class="op">-</span><span class="va">Lambda</span><span class="op">*</span><span class="va">X</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  </span>
+<span>  <span class="co"># function to perform calculations for lambda</span></span>
+<span>  <span class="va">density_lambda_given_x</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">Lambda</span> <span class="op">=</span> <span class="fl">1</span>, <span class="va">X</span> <span class="op">=</span> <span class="fl">1</span>, <span class="va">alpha</span> <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">alpha</span>, <span class="va">beta</span> <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">beta</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    </span>
+<span>    <span class="co"># specify density equation</span></span>
+<span>    <span class="op">(</span><span class="op">(</span><span class="op">(</span><span class="va">X</span> <span class="op">+</span> <span class="va">beta</span><span class="op">)</span><span class="op">^</span><span class="op">(</span><span class="va">alpha</span> <span class="op">+</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span> <span class="op">*</span> <span class="op">(</span><span class="va">Lambda</span><span class="op">^</span><span class="va">alpha</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html">exp</a></span><span class="op">(</span><span class="op">-</span><span class="va">Lambda</span> <span class="op">*</span> <span class="op">(</span><span class="va">X</span> <span class="op">+</span> <span class="va">beta</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="fu"><a href="https://rdrr.io/r/base/Special.html">gamma</a></span><span class="op">(</span><span class="va">alpha</span> <span class="op">+</span> <span class="fl">1</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  </span>
+<span>  <span class="co"># Demo -&gt; Create diagnostic plots --------------------</span></span>
+<span>  </span>
+<span>  <span class="co"># render scatterplot after generating new data</span></span>
+<span>  <span class="va">output</span><span class="op">$</span><span class="va">plot_scatter</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/renderPlot.html">renderPlot</a></span><span class="op">(</span><span class="op">{</span></span>
+<span>    </span>
+<span>    <span class="co"># take a dependency on action button</span></span>
+<span>    <span class="co"># -&gt; and prevent it from returning a plot the first time (ie don't run code until action button is hit)</span></span>
+<span>    <span class="kw">if</span> <span class="op">(</span><span class="va">input</span><span class="op">$</span><span class="va">run</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span><span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="op">)</span><span class="op">}</span></span>
+<span>    </span>
+<span>    <span class="co"># use isolate to avoid dependency on action button</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/isolate.html">isolate</a></span><span class="op">(</span><span class="op">{</span></span>
+<span>      </span>
+<span>      <span class="co"># # create scatterplots of last iterations to visually check for randomness</span></span>
+<span>      <span class="co"># # -&gt; x plot</span></span>
+<span>      <span class="va">plot_scatter_x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">iteration</span>, y <span class="op">=</span> <span class="va">X</span><span class="op">)</span>,</span>
+<span>                   color <span class="op">=</span> <span class="st">"black"</span>, fill <span class="op">=</span> <span class="st">"white"</span>, shape <span class="op">=</span> <span class="fl">21</span>, size <span class="op">=</span> <span class="fl">1</span>, stroke <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>                   data <span class="op">=</span> <span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_scatter"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Scatterplot of generated \nsampled values for X"</span>, x <span class="op">=</span> <span class="st">"Iteration"</span>, y <span class="op">=</span> <span class="st">"x"</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># # -&gt; lambda plot</span></span>
+<span>      <span class="va">plot_scatter_lambda</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">iteration</span>, y <span class="op">=</span> <span class="va">lambda</span><span class="op">)</span>,</span>
+<span>                   color <span class="op">=</span> <span class="st">"black"</span>, fill <span class="op">=</span> <span class="st">"white"</span>, shape <span class="op">=</span> <span class="fl">21</span>, size <span class="op">=</span> <span class="fl">1</span>, stroke <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span>                   data <span class="op">=</span> <span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_scatter"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Scatterplot of generated \nsampled values for λ"</span>, x <span class="op">=</span> <span class="st">"Iteration"</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html">expression</a></span><span class="op">(</span><span class="va">lambda</span><span class="op">)</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># display plots</span></span>
+<span>      <span class="fu"><a href="https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html">ggarrange</a></span><span class="op">(</span><span class="va">plot_scatter_x</span>, <span class="va">plot_scatter_lambda</span><span class="op">)</span></span>
+<span>      </span>
+<span>    <span class="op">}</span><span class="op">)</span> <span class="co"># isolate</span></span>
+<span>  <span class="op">}</span><span class="op">)</span> <span class="co"># render plot</span></span>
+<span>  </span>
+<span>  <span class="co"># Demo -&gt; Create histograms of sampled values and include density curves --------------------</span></span>
+<span>  </span>
+<span>  <span class="co"># render histograms after generating new data</span></span>
+<span>  <span class="va">output</span><span class="op">$</span><span class="va">plot_hist</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/renderPlot.html">renderPlot</a></span><span class="op">(</span><span class="op">{</span></span>
+<span>    </span>
+<span>    <span class="co"># take a dependency on action button</span></span>
+<span>    <span class="co"># -&gt; and prevent it from returning a plot the first time (ie don't run code until action button is hit)</span></span>
+<span>    <span class="kw">if</span> <span class="op">(</span><span class="va">input</span><span class="op">$</span><span class="va">run</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span><span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="op">)</span><span class="op">}</span></span>
+<span>    </span>
+<span>    <span class="co"># use isolate to avoid dependency on action button</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/isolate.html">isolate</a></span><span class="op">(</span><span class="op">{</span></span>
+<span>      </span>
+<span>      <span class="co"># set maximum for x plot</span></span>
+<span>      <span class="va">limit_x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">X</span>, <span class="fl">0.995</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># create histogram of x with marginal density curve overlaid</span></span>
+<span>      <span class="va">plot_hist_x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">X</span>, y <span class="op">=</span> <span class="va">..density..</span>, fill <span class="op">=</span> <span class="st">"Sampled values"</span><span class="op">)</span>,</span>
+<span>                       bins <span class="op">=</span> <span class="fl">40</span>, color <span class="op">=</span> <span class="st">"grey60"</span>,</span>
+<span>                       data <span class="op">=</span> <span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html">stat_function</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, color <span class="op">=</span> <span class="st">"Actual density"</span><span class="op">)</span>,</span>
+<span>                      fun <span class="op">=</span> <span class="va">dpareto2</span>, args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>shape <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">alpha</span>, scale <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">beta</span><span class="op">)</span>,</span>
+<span>                      data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="va">limit_x</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                      n <span class="op">=</span> <span class="fl">100000</span>, size <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html">coord_cartesian</a></span><span class="op">(</span>xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="va">limit_x</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="st">"grey40"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Histogram of generated \nsample values of X"</span>, x <span class="op">=</span> <span class="st">"x"</span>,</span>
+<span>             color <span class="op">=</span> <span class="st">""</span>, fill <span class="op">=</span> <span class="st">""</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># create histogram of lambda with marginal density curve overlaid</span></span>
+<span>      <span class="va">plot_hist_lambda</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html">geom_histogram</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">lambda</span>, y <span class="op">=</span> <span class="va">..density..</span>, fill <span class="op">=</span> <span class="st">"Sampled values"</span><span class="op">)</span>,</span>
+<span>                       bins <span class="op">=</span> <span class="fl">40</span>, color <span class="op">=</span> <span class="st">"grey60"</span>,</span>
+<span>                       data <span class="op">=</span> <span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html">stat_function</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, color <span class="op">=</span> <span class="st">"Actual density"</span><span class="op">)</span>,</span>
+<span>                      fun <span class="op">=</span> <span class="va">dgamma</span>, args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>shape <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">alpha</span>, rate <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">beta</span><span class="op">)</span>,</span>
+<span>                      data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">lambda</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                      n <span class="op">=</span> <span class="fl">100000</span>, size <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="st">"grey40"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Histogram of generated \nsample values of λ"</span>, x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html">expression</a></span><span class="op">(</span><span class="va">lambda</span><span class="op">)</span>,</span>
+<span>             color <span class="op">=</span> <span class="st">""</span>, fill <span class="op">=</span> <span class="st">""</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># display plots</span></span>
+<span>      <span class="fu"><a href="https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html">ggarrange</a></span><span class="op">(</span><span class="va">plot_hist_x</span>, <span class="va">plot_hist_lambda</span><span class="op">)</span></span>
+<span>      </span>
+<span>    <span class="op">}</span><span class="op">)</span> <span class="co"># isolate</span></span>
+<span>  <span class="op">}</span><span class="op">)</span> <span class="co"># render plot</span></span>
+<span>  </span>
+<span>  <span class="co"># Demo -&gt; Solve for estimated densities &amp; create plots of estimated densities and actual densities ------------------------------------------</span></span>
+<span>  </span>
+<span>  <span class="co"># render scatterplot after generating new data</span></span>
+<span>  <span class="va">output</span><span class="op">$</span><span class="va">plot_est</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/renderPlot.html">renderPlot</a></span><span class="op">(</span><span class="op">{</span></span>
+<span>    </span>
+<span>    <span class="co"># take a dependency on action button</span></span>
+<span>    <span class="co"># -&gt; and prevent it from returning a plot the first time (ie don't run code until action button is hit)</span></span>
+<span>    <span class="kw">if</span> <span class="op">(</span><span class="va">input</span><span class="op">$</span><span class="va">run</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span><span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="op">)</span><span class="op">}</span></span>
+<span>    </span>
+<span>    <span class="co"># use isolate to avoid dependency on action button</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/isolate.html">isolate</a></span><span class="op">(</span><span class="op">{</span></span>
+<span>      </span>
+<span>      <span class="co"># set max for plot and calculate points to estimate density of x at (if is to make sure step isn't zero)</span></span>
+<span>      <span class="va">step_x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/diff.html">diff</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/range.html">range</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">X</span><span class="op">)</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">1</span>,</span>
+<span>                       <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">X</span>, <span class="fl">0.995</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">X</span><span class="op">)</span><span class="op">)</span><span class="op">/</span><span class="fl">40</span>, <span class="fl">5</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="va">as.numeric</span>,</span>
+<span>                       <span class="fl">0.01</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># set maximum for lambda plot</span></span>
+<span>      <span class="va">limit_x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">X</span>, <span class="fl">0.995</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># create matrices of data to be used for x</span></span>
+<span>      <span class="va">values_x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="va">limit_x</span>, by <span class="op">=</span> <span class="va">step_x</span><span class="op">)</span></span>
+<span>      <span class="va">X1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> , <span class="va">values_x</span>, nrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">values_x</span><span class="op">)</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span>      <span class="va">Lambda1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">lambda</span>, nrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">X1</span><span class="op">)</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># calculate density estimates for f(x)</span></span>
+<span>      <span class="va">data_estimated_x</span> <span class="op">&lt;-</span> <span class="fu">estimate_density</span><span class="op">(</span>input_values <span class="op">=</span> <span class="va">X1</span>, given_values <span class="op">=</span> <span class="va">Lambda1</span>, equation <span class="op">=</span> <span class="va">density_x_given_lambda</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>        <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">values_x</span>, f_x_hat <span class="op">=</span> <span class="va">.</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># set max for plot and  calculate points to estimate density of lambda at (if is to make sure step isn't zero)</span></span>
+<span>      <span class="va">step_lambda</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/diff.html">diff</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/range.html">range</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">lambda</span><span class="op">)</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">1</span>,</span>
+<span>                            <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/quantile.html">quantile</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">lambda</span>, <span class="fl">0.995</span><span class="op">)</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">lambda</span><span class="op">)</span><span class="op">)</span><span class="op">/</span><span class="fl">40</span>, <span class="fl">5</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="va">as.numeric</span>,</span>
+<span>                            <span class="fl">0.01</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># create matrices of data to be used for lambda</span></span>
+<span>      <span class="va">values_lambda</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">lambda</span><span class="op">)</span>, by <span class="op">=</span> <span class="va">step_lambda</span><span class="op">)</span></span>
+<span>      <span class="va">Lambda2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> , <span class="va">values_lambda</span>, nrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">values_lambda</span><span class="op">)</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span>      <span class="va">X2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">X</span>, nrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">Lambda2</span><span class="op">)</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># calculate density estimates for f(lambda)</span></span>
+<span>      <span class="va">data_estimated_lambda</span> <span class="op">&lt;-</span> <span class="fu">estimate_density</span><span class="op">(</span>input_values <span class="op">=</span> <span class="va">Lambda2</span>, given_values <span class="op">=</span> <span class="va">X2</span>, <span class="va">density_lambda_given_x</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>        <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>lambda <span class="op">=</span> <span class="va">values_lambda</span>, f_lambda_hat <span class="op">=</span> <span class="va">.</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># X plot</span></span>
+<span>      <span class="co"># -&gt; density estimates with marginal density curve overlaid</span></span>
+<span>      <span class="va">plot_estimated_x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">f_x_hat</span>, fill <span class="op">=</span> <span class="st">"Estimated density"</span><span class="op">)</span>,</span>
+<span>                   color <span class="op">=</span> <span class="st">"black"</span>, shape <span class="op">=</span> <span class="fl">21</span>, size <span class="op">=</span> <span class="fl">2</span>, stroke <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>                   data <span class="op">=</span> <span class="va">data_estimated_x</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html">stat_function</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, color <span class="op">=</span> <span class="st">"Actual density"</span><span class="op">)</span>,</span>
+<span>                      fun <span class="op">=</span> <span class="va">dpareto2</span>, args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>shape <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">alpha</span>, scale <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">beta</span><span class="op">)</span>,</span>
+<span>                      data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="va">limit_x</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                      n <span class="op">=</span> <span class="fl">100000</span>, size <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html">coord_cartesian</a></span><span class="op">(</span>xlim <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="va">limit_x</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="st">"grey60"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Estimated and actual density of X"</span>, x <span class="op">=</span> <span class="st">"x"</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html">expression</a></span><span class="op">(</span><span class="fu">f</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/influence.measures.html">hat</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>             color <span class="op">=</span> <span class="st">""</span>, fill <span class="op">=</span> <span class="st">""</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># Lambda plot</span></span>
+<span>      <span class="co"># -&gt; density estimates with marginal density curve overlaid</span></span>
+<span>      <span class="va">plot_estimated_lambda</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">lambda</span>, y <span class="op">=</span> <span class="va">f_lambda_hat</span>, fill <span class="op">=</span> <span class="st">"Estimated density"</span><span class="op">)</span>,</span>
+<span>                   color <span class="op">=</span> <span class="st">"black"</span>, shape <span class="op">=</span> <span class="fl">21</span>, size <span class="op">=</span> <span class="fl">2</span>, stroke <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>                   data <span class="op">=</span> <span class="va">data_estimated_lambda</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_function.html">stat_function</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, color <span class="op">=</span> <span class="st">"Actual density"</span><span class="op">)</span>,</span>
+<span>                      fun <span class="op">=</span> <span class="va">dgamma</span>, args <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>shape <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">alpha</span>, rate <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">beta</span><span class="op">)</span>,</span>
+<span>                      data <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="fu">get_new_data</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">lambda</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>                      n <span class="op">=</span> <span class="fl">100000</span>, size <span class="op">=</span> <span class="fl">0.75</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_color_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="st">"grey60"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Estimated and actual density of  λ"</span>, x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html">expression</a></span><span class="op">(</span><span class="va">lambda</span><span class="op">)</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html">expression</a></span><span class="op">(</span><span class="fu">f</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/influence.measures.html">hat</a></span><span class="op">(</span><span class="va">lambda</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>             color <span class="op">=</span> <span class="st">""</span>, fill <span class="op">=</span> <span class="st">""</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># display plots</span></span>
+<span>      <span class="fu"><a href="https://rpkgs.datanovia.com/ggpubr/reference/ggarrange.html">ggarrange</a></span><span class="op">(</span><span class="va">plot_estimated_x</span>, <span class="va">plot_estimated_lambda</span><span class="op">)</span></span>
+<span>      </span>
+<span>    <span class="op">}</span><span class="op">)</span> <span class="co"># isolate</span></span>
+<span>  <span class="op">}</span><span class="op">)</span> <span class="co"># render plot</span></span>
+<span>  </span>
+<span>  <span class="co"># Application -&gt; Functions for data ------------------------</span></span>
+<span>  </span>
+<span>  <span class="co"># function to generate data and create modified datasets</span></span>
+<span>  <span class="co"># -&gt; returns a list of the modified datasets</span></span>
+<span>  <span class="va">get_new_data_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/reactive.html">reactive</a></span><span class="op">(</span><span class="op">{</span></span>
+<span>    </span>
+<span>    <span class="co"># create object to store datasets</span></span>
+<span>    <span class="va">data_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>data_sample <span class="op">=</span> <span class="cn">NULL</span>, data_sample2 <span class="op">=</span> <span class="cn">NULL</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="co"># sample from conditional distributions </span></span>
+<span>    <span class="va">data_2</span><span class="op">[[</span><span class="st">"data_sample"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="fu">generate_sample_2</span><span class="op">(</span>k <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">k_2</span>, alpha <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">alpha_2</span>, beta <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">beta_2</span>, lambda <span class="op">=</span> <span class="va">input</span><span class="op">$</span><span class="va">lambda_2</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="co"># set number of burn-in iterations</span></span>
+<span>    <span class="va">burn_in_2</span> <span class="op">&lt;-</span> <span class="fl">100</span></span>
+<span>    </span>
+<span>    <span class="co"># remove burn-in iteration</span></span>
+<span>    <span class="va">data_2</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">data_2</span><span class="op">[[</span><span class="st">"data_sample"</span><span class="op">]</span><span class="op">]</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>      <span class="va">data.frame</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>      <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">iteration</span> <span class="op">&gt;</span> <span class="va">burn_in_2</span><span class="op">)</span></span>
+<span>    </span>
+<span>    <span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="va">data_2</span><span class="op">)</span></span>
+<span>    </span>
+<span>  <span class="op">}</span><span class="op">)</span> <span class="co"># event reactive</span></span>
+<span>  </span>
+<span>  <span class="co"># function to perform calculations for x</span></span>
+<span>  <span class="co"># -&gt; x is technically a pmf</span></span>
+<span>  <span class="va">density_x_given_p_and_n_2</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">X</span> <span class="op">=</span> <span class="fl">1</span>, <span class="va">P</span> <span class="op">=</span> <span class="fl">0.5</span>, <span class="va">N</span> <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    </span>
+<span>    <span class="co"># specify density equation</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/base/Special.html">choose</a></span><span class="op">(</span><span class="va">N</span>, <span class="va">X</span><span class="op">)</span> <span class="op">*</span> <span class="va">P</span><span class="op">^</span><span class="va">X</span> <span class="op">*</span> <span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="va">P</span><span class="op">)</span><span class="op">^</span><span class="op">(</span><span class="va">N</span> <span class="op">-</span> <span class="va">X</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  </span>
+<span>  <span class="co"># Application -&gt; Solve for estimated densities &amp; and create plot of estimated density ------------------------</span></span>
+<span>  </span>
+<span>  <span class="co"># render scatterplot after generating new data</span></span>
+<span>  <span class="va">output</span><span class="op">$</span><span class="va">plot_est_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/renderPlot.html">renderPlot</a></span><span class="op">(</span><span class="op">{</span></span>
+<span>    </span>
+<span>    <span class="co"># take a dependency on action button</span></span>
+<span>    <span class="co"># -&gt; and prevent it from returning a plot the first time (ie don't run code until action button is hit)</span></span>
+<span>    <span class="kw">if</span> <span class="op">(</span><span class="va">input</span><span class="op">$</span><span class="va">run_2</span> <span class="op">==</span> <span class="fl">0</span><span class="op">)</span> <span class="op">{</span><span class="kw"><a href="https://rdrr.io/r/base/function.html">return</a></span><span class="op">(</span><span class="op">)</span><span class="op">}</span></span>
+<span>    </span>
+<span>    <span class="co"># use isolate to avoid dependency on action button</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/pkg/shiny/man/isolate.html">isolate</a></span><span class="op">(</span><span class="op">{</span></span>
+<span>      </span>
+<span>      <span class="co"># determine step size for x values</span></span>
+<span>      <span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/diff.html">diff</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/range.html">range</a></span><span class="op">(</span><span class="fu">get_new_data_2</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">X</span><span class="op">)</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">75</span><span class="op">)</span> <span class="op">{</span></span>
+<span>        <span class="va">step</span> <span class="op">&lt;-</span> <span class="fl">5</span></span>
+<span>      <span class="op">}</span> <span class="kw">else</span> <span class="op">{</span></span>
+<span>        <span class="va">step</span> <span class="op">&lt;-</span> <span class="fl">1</span></span>
+<span>      <span class="op">}</span></span>
+<span>      </span>
+<span>      <span class="co"># create matrices of data to be used for x</span></span>
+<span>      <span class="va">values_x_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="fu">get_new_data_2</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">X</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="fu">get_new_data_2</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">X</span><span class="op">)</span>, by <span class="op">=</span> <span class="va">step</span><span class="op">)</span></span>
+<span>      <span class="va">X_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> , <span class="va">values_x_2</span>, nrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="fu">get_new_data_2</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">values_x_2</span><span class="op">)</span>, byrow <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span>      <span class="va">P_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu">get_new_data_2</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">p</span>, nrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="fu">get_new_data_2</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">X_2</span><span class="op">)</span><span class="op">)</span></span>
+<span>      <span class="va">N_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html">matrix</a></span><span class="op">(</span>data <span class="op">=</span> <span class="fu">get_new_data_2</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">$</span><span class="va">n</span>, nrow <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="fu">get_new_data_2</span><span class="op">(</span><span class="op">)</span><span class="op">[[</span><span class="st">"data_sample2"</span><span class="op">]</span><span class="op">]</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">X_2</span><span class="op">)</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># calculate density estimates for f(x) and scale so that probabilities sum to one</span></span>
+<span>      <span class="co"># -&gt; with a step of 1, it is always super close to 1</span></span>
+<span>      <span class="co"># --&gt; but if use a different step size, need to scale probabilities</span></span>
+<span>      <span class="va">data_estimated_x_2</span> <span class="op">&lt;-</span> <span class="fu">estimate_density_2</span><span class="op">(</span>input_values <span class="op">=</span> <span class="va">X_2</span>, given_values1 <span class="op">=</span> <span class="va">P_2</span>, given_values2 <span class="op">=</span> <span class="va">N_2</span>, equation <span class="op">=</span> <span class="va">density_x_given_p_and_n_2</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>        <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">values_x_2</span>, f_x_hat <span class="op">=</span> <span class="va">.</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>        <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>f_x_hat <span class="op">=</span> <span class="va">f_x_hat</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/sum.html">sum</a></span><span class="op">(</span><span class="va">f_x_hat</span><span class="op">)</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># calculate mean</span></span>
+<span>      <span class="va">x_mean_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu">calc_mean_2</span><span class="op">(</span>x <span class="op">=</span> <span class="va">data_estimated_x_2</span><span class="op">$</span><span class="va">x</span>, p_x <span class="op">=</span> <span class="va">data_estimated_x_2</span><span class="op">$</span><span class="va">f_x_hat</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># calculate variance</span></span>
+<span>      <span class="va">x_var_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu">calc_var_2</span><span class="op">(</span>x <span class="op">=</span> <span class="va">data_estimated_x_2</span><span class="op">$</span><span class="va">x</span>, p_x <span class="op">=</span> <span class="va">data_estimated_x_2</span><span class="op">$</span><span class="va">f_x_hat</span><span class="op">)</span>, <span class="fl">3</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># X plot</span></span>
+<span>      <span class="co"># -&gt; density estimates with marginal density curve overlaid</span></span>
+<span>      <span class="va">p_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, y <span class="op">=</span> <span class="va">f_x_hat</span>, fill <span class="op">=</span> <span class="st">"Estimated density"</span><span class="op">)</span>,</span>
+<span>                   color <span class="op">=</span> <span class="st">"black"</span>, shape <span class="op">=</span> <span class="fl">21</span>, size <span class="op">=</span> <span class="fl">2</span>, stroke <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>                   data <span class="op">=</span> <span class="va">data_estimated_x_2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_linerange.html">geom_linerange</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">x</span>, ymax <span class="op">=</span> <span class="va">f_x_hat</span><span class="op">)</span>,</span>
+<span>                       ymin <span class="op">=</span> <span class="fl">0</span>,</span>
+<span>                       data <span class="op">=</span> <span class="va">data_estimated_x_2</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/annotate.html">annotate</a></span><span class="op">(</span><span class="st">"text"</span>, x <span class="op">=</span> <span class="cn">Inf</span>, y <span class="op">=</span> <span class="cn">Inf</span>, hjust <span class="op">=</span> <span class="fl">1</span>, vjust <span class="op">=</span> <span class="fl">1</span>,</span>
+<span>                 label <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"mean = "</span>, <span class="va">x_mean_2</span>, <span class="st">"\nvar = "</span>, <span class="va">x_var_2</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Estimated density of X"</span>, x <span class="op">=</span> <span class="st">"x"</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/expression.html">expression</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/influence.measures.html">hat</a></span><span class="op">(</span><span class="fu">f</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span>
+<span>             fill <span class="op">=</span> <span class="st">""</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"bottom"</span><span class="op">)</span></span>
+<span>      </span>
+<span>      <span class="co"># display plot</span></span>
+<span>      <span class="va">p_2</span></span>
+<span>      </span>
+<span>    <span class="op">}</span><span class="op">)</span> <span class="co"># isolate</span></span>
+<span>  <span class="op">}</span><span class="op">)</span> <span class="co"># render plot</span></span>
+<span>  </span>
+<span><span class="op">}</span> <span class="co"># server</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="combine" class="level3"><h3 class="anchored" data-anchor-id="combine">Combine</h3>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">### ---- Run app ---- </span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/shinyApp.html">shinyApp</a></span><span class="op">(</span><span class="va">ui</span>, <span class="va">server</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Overview">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Overview</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./interview.html" class="pagination-link" aria-label="Interview">
+        <span class="nav-page-text">Interview</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>
